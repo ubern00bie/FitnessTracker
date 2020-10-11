@@ -9,6 +9,10 @@ const workoutSchema = new Schema(
     },
     exercises: [
       {
+        _id:{
+          type: Schema.Types.ObjectId,
+          required: true
+        },
         name: {
           type: String,
           trim: true,
@@ -32,10 +36,13 @@ const workoutSchema = new Schema(
           type: Number,
         },
          distance:{
-          type: Number,
+          type: Number
         }
       }
     ],
+    totalDuration:{
+      type: Number
+    }
  
   }
 );
