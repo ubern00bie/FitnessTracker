@@ -7,6 +7,7 @@ const workoutSchema = new Schema(
       type: Date,
       default: Date.now()
     },
+    
     exercises: [
       {
         _id:{
@@ -22,9 +23,9 @@ const workoutSchema = new Schema(
           type: String
         },
         duration: {
-          type: String,
+          type: Number,
           trim: true,
-          required:"Enter the exercise duration in minutes"
+          default: 0
         },
          weight:{
            type: Number,
@@ -41,7 +42,7 @@ const workoutSchema = new Schema(
       }
     ],
     totalDuration:{
-      type: Number
+      type: String
     }
  
   }
